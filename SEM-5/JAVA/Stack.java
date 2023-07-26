@@ -18,7 +18,7 @@ class sstack{
 	double pop(){
 		if(tos==-1){
 			System.out.println("Stack Underflow");
-			return 0;  
+			return 0;
 		}
 		else{
 			return data[tos--];	
@@ -27,17 +27,21 @@ class sstack{
 	}
 
 	double peek(){
-		return data[tos];
+		if(tos==-1){
+			System.out.println("Queue is Empty !");
+		}
+		System.out.println(+data[tos]);
+		return 0;
 	}
 }
 
-class stack{
+class Stack{
 	public static void main(String[] args) {
 		sstack s = new sstack();
 		Scanner sc = new Scanner(System.in);
 		for(;;){
 			int choice;
-			System.out.println("Enter 1 for push 2 for pop 3 for peep and 0 for exit: ");
+			System.out.println("1 : PUSH \n2 : POP \n3 : PEEP \n0 : EXIT ");
 			choice = sc.nextInt();
 
 			if(choice==1){
