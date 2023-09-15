@@ -1,0 +1,7 @@
+print("Enter your Name : ");
+name = readline();
+
+print("Enter ID Number : ");
+id = readline();
+println("\n\nName : ",name);
+println("ID Number : ",id);
