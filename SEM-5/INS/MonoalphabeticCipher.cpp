@@ -100,12 +100,12 @@ int main()
         }
     }
     decAry[p]==NULL;
-    cout<<"\n\n-----Plaintext to Ciphertext-----"<<endl<<endl;
+    cout<<"\n\nPlaintext to Ciphertext"<<endl<<endl;
     cout<<"Plain text  : "<<plainText<<endl;
     cout<<"Key         : "<<key<<endl;
     cout<<"Cipher text : "<<cipherText<<endl;;
     cout<<endl;
-    cout<<"\n\n-----Ciphertext to Plaintext-----"<<endl<<endl;
+    cout<<"\n\nCiphertext to Plaintext"<<endl<<endl;
     cout<<"Cipher text    : "<<cipherText<<endl;;
     cout<<"Key            : "<<key<<endl;
     cout<<"Retrived text  : "<<decAry<<endl;

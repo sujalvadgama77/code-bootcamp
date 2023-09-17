@@ -5,7 +5,6 @@ void vegenere(){
     int kSize,pSize,cipher,p,k,pTemp,kTemp,choice=0;
     char plainText[30],key[20],cipherText[30];
 
-    cout<<"\n\n------Vigenere cipher-----\n\n";
 
     cout<<"Enter PlainText : ";
     cin>>plainText;
@@ -63,7 +62,7 @@ void vegenere(){
 
 
 
-    cout<<"\n\n-----Plaintext to Ciphertext-----"<<endl<<endl;
+    cout<<"\n\nPlaintext to Ciphertext"<<endl<<endl;
     cout<<"Plain text  : ";
     for(int i=0; i<pTemp; i++)
     {
@@ -85,7 +84,7 @@ void vegenere(){
     }
     cout<<endl<<endl;
 
-    cout<<"\n\n-----CipherText to Plaintext-----"<<endl<<endl;
+    cout<<"\n\nCipherText to Plaintext"<<endl<<endl;
     cout<<"Cipher text : ";
     for(int i=0; i<pSize; i++)
     {
@@ -120,7 +119,7 @@ void vernum(){
 
         int kSize,pSize,cipher,p,k,pTemp,kTemp,plainText[30],key[20],cipherText[30];
 
-    cout<<"\n\n------Vernam cipher-----\n\n";
+
 
     cout<<"Enter size of plaintext : ";
     cin>>pSize;
@@ -162,7 +161,7 @@ void vernum(){
         cipherText[i]=plainText[i]^key[i];
     }
 
-    cout<<"\n\n-----Plaintext to Ciphertext-----"<<endl<<endl;
+    cout<<"\n\nPlaintext to Ciphertext"<<endl<<endl;
     cout<<"Plain text  : ";
     for(int i=0; i<pTemp; i++)
     {
@@ -184,7 +183,7 @@ void vernum(){
     }
     cout<<endl<<endl;
 
-     cout<<"\n\n-----CipherText to Plaintext-----"<<endl<<endl;
+     cout<<"\n\nCipherText to Plaintext"<<endl<<endl;
     cout<<"Cipher text : ";
     for(int i=0; i<pSize; i++)
     {
@@ -215,7 +214,7 @@ void vernum(){
 
 int main(){
 
-    cout<<"1 : Vegenere ciphet\n2 : Vernum cipher\nSelected choice : ";
+    cout<<"1-> vegenere ciphet\n2-> vernum cipher\n";
     int choice;
     cin>>choice;
 

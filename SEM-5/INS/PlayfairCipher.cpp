@@ -103,7 +103,7 @@ int main()
 
     }
 
-    cout<<"\n\n-----Matrix-----"<<endl<<endl;
+    cout<<"\n\nMatrix"<<endl<<endl;
 
     for(int i=0; i<5; i++)
     {
@@ -114,7 +114,7 @@ int main()
         cout<<endl;
     }
 
-    cout<<"\n\n----------Plaintext divide in 2 char ---------"<<endl<<endl;
+    cout<<"\n\nPlaintext divide in 2 char"<<endl<<endl;
     k=0;
     for(int i=0; plainText[i]!=NULL; i++)
     {
@@ -255,7 +255,7 @@ int main()
 
     }
 
-    cout<<"\n\n-----Plaintext to Ciphertext-----"<<endl<<endl;
+    cout<<"\n\nPlaintext to Ciphertext"<<endl<<endl;
     cout<<"Plain text  : ";
     for(int i=0;i<plen; i++)
     {
@@ -271,7 +271,7 @@ int main()
     cout<<endl;
 
     cIndex=0;
-    cout<<"\n\n-----Ciphertext to Plaintext-----"<<endl<<endl;
+    cout<<"\n\nCiphertext to Plaintext"<<endl<<endl;
     cout<<"Cipher text    : ";
     for(int i=0;i<plen; i++)
     {
@@ -371,7 +371,7 @@ int main()
         i++;
 
     }
-    cout<<"Retrived text  : ";
+    cout<<"text  : ";
     for(int i=0;i<plen; i++)
     {
         decAry[i]=decAry[i]+32;

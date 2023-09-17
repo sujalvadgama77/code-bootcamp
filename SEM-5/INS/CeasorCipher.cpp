@@ -61,7 +61,7 @@ int main()
     cout<<"Enter key : ";
     cin>>key;
 
-    cout<<"\n\n-----Plaintext to Ciphertext-----"<<endl<<endl;
+    cout<<"\n\nPlaintext to Ciphertext"<<endl<<endl;
     cout<<"Plain text  : "<<plainText<<endl;
     cout<<"Key         : "<<key<<endl;
     cout<<"Cipher text : ";
@@ -69,7 +69,7 @@ int main()
     cout<<endl;
 
 
-    cout<<"\n\n-----Ciphertext to Plaintext-----"<<endl<<endl;
+    cout<<"\n\nCiphertext to Plaintext"<<endl<<endl;
     cout<<"Cipher text  : ";
     plainTextToCipherTextCeasorCipher(plainText,key);
     cout<<endl;
