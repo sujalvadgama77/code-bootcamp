@@ -1,70 +1,90 @@
 import java.util.Scanner;
 
-class sstack{
-	double[] data= new double[10];
-	Scanner sc = new Scanner(System.in);
-	int tos = -1;
+class StackClass{
 
-	void push(double value){
-		if(tos==9){
-			System.out.println("Stack Overflow");
-		}
-		else{
-			data[++tos]=value;	
-		}
-		
+	int tos;
+	int len;
+	int stack[];
+
+	StackClass(){
+		tos = -1;
 	}
 
-	double pop(){
+	StackClass(int d_len){
+		tos = -1;
+		len = d_len;
+		stack = new int[len];
+	}
+
+	void push(int ele){
+		if(tos==len-1){
+            int[] temp = new int[len*2];
+            for(int i = 0;i<len;i++){
+                temp[i]=stack[i];
+            }
+            stack=temp;
+			stack[++tos]=ele;
+			System.out.println("Pushed Element " +stack[tos] +" in stack");
+            len=len*2;
+		}else{
+			stack[++tos]=ele;
+			System.out.println("Pushed SElement " +stack[tos] +" in stack");
+		}
+	}
+
+	void pop(){
 		if(tos==-1){
-			System.out.println("Stack Underflow");
-			return 0;
+			System.out.println("\nStack is empty!!!");
+		}else{
+			tos--;
+			System.out.println("Popped element " +stack[tos+1] +" in stack");
 		}
-		else{
-			return data[tos--];	
-		}
-		
 	}
 
-	double peek(){
+	void display(){
 		if(tos==-1){
-			System.out.println("Queue is Empty !");
+			System.out.println("\nStack is empty.");
+		}else{
+			System.out.println("\n------Stack-----\n");
+			for(int i=0;i<=tos;i++){
+				System.out.print(stack[i] +" ");
+			}
 		}
-		System.out.println(+data[tos]);
-		return 0;
 	}
+
 }
 
 class Stack{
 	public static void main(String[] args) {
-		sstack s = new sstack();
+
+		
 		Scanner sc = new Scanner(System.in);
-		for(;;){
-			int choice;
-			System.out.println("1 : PUSH \n2 : POP \n3 : PEEP \n0 : EXIT ");
+		int choice,ele,len;
+
+		System.out.println("-----Dyanamic Stack-----\n");
+
+		System.out.print("Enter initial size of stack : ");
+		len=sc.nextInt();
+
+		StackClass stk = new StackClass(len);
+		
+		do{
+			System.out.print("\n1 : PUSH\n2 : POP\n3 : DISPLAY\n");
 			choice = sc.nextInt();
-
-			if(choice==1){
-				double value;
-				System.out.println("Enter element to push: ");
-				value = sc.nextDouble();
-				s.push(value);
+			if(choice == 1){
+				System.out.print("\nEnter element : ");
+				ele=sc.nextInt();			
+				stk.push(ele);			
+			}else if (choice == 2) {
+				stk.pop();
+			}else if (choice == 3) {
+				stk.display();
+			}else if (choice == 4) {
+				System.out.println("Thanks for visit");
+			}else{
+				System.out.println("\nInvalid input");
 			}
-			else if(choice == 2){
-				double ans =s.pop();
-				System.out.println("Poped element: "+ ans);
-			}
-			else if(choice == 3){
-				double ans = s.peek();
-				System.out.println(ans);
-			}
-			else if(choice == 4){
-				break;
-			}
-			else{
-				System.out.println("Enter proper operation");
-			}
-
-		}
+		}while(choice!=4);
+		
 	}
 }
