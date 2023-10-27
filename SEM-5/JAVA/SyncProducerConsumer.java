@@ -12,8 +12,6 @@ class Object
 		isvalueset = true;
 		notify();	
 		}
-		else
-		{
 			try
 			{
 				wait();
@@ -22,7 +20,6 @@ class Object
 			{
 				System.out.println("Exception : " + IE);
 			}
-		}
 		return 0;
 	}
 
@@ -34,9 +31,8 @@ class Object
 		isvalueset = false;
 		notify();
 		}
-		else
-		{
-			try
+
+		try
 			{
 				wait();
 			}
@@ -46,7 +42,7 @@ class Object
 			}
 		}
 	}
-}
+
 
 class Producer implements Runnable
 {

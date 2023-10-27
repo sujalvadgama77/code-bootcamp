@@ -2,29 +2,41 @@ class MonthNumber {
 	static String nameofMonth(String month) {
 		if(month.equals("01")) {
 			return "January";
-		} else if(month.equals("02")) {
+		} 
+		else if(month.equals("02")) {
 			return "February";
-		} else if(month.equals("03")) {
+		} 
+		else if(month.equals("03")) {
 			return "March";
-		} else if(month.equals("04")) {
+		} 
+		else if(month.equals("04")) {
 			return "April";
-		} else if(month.equals("05")) {
+		} 
+		else if(month.equals("05")) {
 			return "May";
-		} else if(month.equals("06")) {
+		} 
+		else if(month.equals("06")) {
 			return "June";
-		} else if(month.equals("07")) {
+		} 
+		else if(month.equals("07")) {
 			return "July";
-		} else if(month.equals("08")) {
+		} 
+		else if(month.equals("08")) {
 			return "August";
-		} else if(month.equals("09")) {
+		} 
+		else if(month.equals("09")) {
 			return "September";
-		} else if(month.equals("10")) {
+		} 
+		else if(month.equals("10")) {
 			return "October";
-		} else if(month.equals("11")) {
+		} 
+		else if(month.equals("11")) {
 			return "November";
-		} else if(month.equals("12")) {
+		} 
+		else if(month.equals("12")) {
 			return "December";
-		} else {
+		} 
+		else {
 			return "Illegal";
 		}
 	}
